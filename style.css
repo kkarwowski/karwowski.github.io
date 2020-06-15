@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(bg.jpg) no-repeat center fixed;
+  background: url(bg_large.jpg) no-repeat center fixed;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -18,6 +18,26 @@ body{
   color: white;
   font-family: 'Century Gothic',sans-serif;
 }
+.box_counter{
+  width: 130px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: 'Century Gothic',sans-serif;
+  font-size: 10px;
+}
+.box_counter i{
+  font-size: 60px;
+}
+.box_counter h5{
+  font-size: 39px;
+}
+/* .box_counter p{
+  font-size: px;
+} */
 .box-img{
   border-radius: 50%;
   width: 200px;

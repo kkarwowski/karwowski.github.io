@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <title>Personal website -  Krzysztof Karwowski</title>
   </head>
   <body>
@@ -13,13 +16,30 @@
 Krzysztof Karwowski</h1>
 <h5>
 IT Professional - IT Enthusiast</h5>
+
 <p>
+<p></p>
 Looking for opportunities in IT field.</p>
 <ul>
 <li><a href="https://github.com/kkarwowski" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 <li><a href="https://uk.linkedin.com/in/kkarwowski"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 </ul>
+  <div class="box_counter">
+    <i class="fa fa-code" aria-hidden="true"></i>
+  <h5><div class="num">5684</div></h5>
+  Lines of code written
+  </div>
+  <div class="box_counter">
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+  <h5><div class="num">2</div>hrs and<div class="num">45</div>minutes</h5>
+  saved by automation scripts used daily
+  </div>
+
+</div>
+<script type="text/javascript">
+  $(".num").counterUp({delay:10,time:1000});
+</script>
 </div>
 </body>
 </html>
