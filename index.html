@@ -2,44 +2,123 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <!-- <script type"module" src="countUp.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"></script>
     <title>Personal website -  Krzysztof Karwowski</title>
   </head>
   <body>
-<div class="box">
-  <!-- <img src="me.jpg" alt="" class="box-img"> -->
-  <h1>
-Krzysztof Karwowski</h1>
-<h5>
-IT Professional - IT Enthusiast</h5>
 
-<p>
-<p></p>
-Looking for opportunities in IT field.</p>
+<div class="box">
+HELLO, IT'S ME
+<hr style="width:100%; height:1px; background-color: #bdbdbd ; border:none;" />​​​​​​​​​​​​​​​​​​​
+  <div class="title_page">KRZYSZTOF KARWOWSKI</div><br>
+
+  <hr style="width:100%; height:1px; background-color: #bdbdbd ; border:none;">​​​​​​​​​​​​​​​​​​​
+  <!-- <div class="chris">
+  BUT CALL ME CHRIS
+  </div> -->
+
+<div class="below">
+<h5>IT Professional - Technology Enthusiast</h5>
+<br>
+<br>
+<!-- <h5>Looking for opportunities in IT field.</h5> -->
+
+<!-- <h5>Looking for opportunities in IT field.</h5> -->
+<br>
+</div>
+
+
+
+<br>
+<br>
+
+<div class="livedata">
+<ul>
+        <li><div class="box_counter"><i class="fa fa-clock-o" aria-hidden="true"></i><p><div id = "lol">292</div></p>I saved by using my automation scirips at work</div></li>
+<li><div class="box_counter"><i class="fa fa-code" aria-hidden="true"></i><p><div class="num" id="display">2564</div></p>lines of code published to Github</div></li>
+      </ul>
+</div>
+
+<div class="livedata_dot_and_text">
+<div class="livedata_dot"> <svg height="10" width="10" class="blinking">
+<circle cx="5" cy="5" r="5" fill="red" />
+Sorry, your browser does not support inline SVG.
+</svg></div>
+
+<div class="livedata_dot_txt">
+Live data - updates each time I run a script
+</div>
+</div>
+<br>
+
+<!-- <div class="livedata_dot">
+<ul>
+<li><svg height="10" width="10" class="blinking">
+<circle cx="5" cy="5" r="5" fill="red" />
+Sorry, your browser does not support inline SVG.
+</svg></li>
+<br>
+<li>Live data - updates each time I run a script</li>
+</ul>
+</div> -->
+
+
+<div class="iconss">
 <ul>
 <li><a href="https://github.com/kkarwowski" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 <li><a href="https://uk.linkedin.com/in/kkarwowski"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 </ul>
-  <!-- <div class="box_counter">
-    <i class="fa fa-code" aria-hidden="true"></i>
-  <h5><div class="num">5684</div></h5>
-  Lines of code written
-  </div> -->
-  <div class="box_counter">
-    <i class="fa fa-clock-o" aria-hidden="true"></i>
-  <h5><div class="num">2</div>hrs and<div class="num">45</div>minutes</h5>
-  saved by automation scripts used daily
-  </div>
+</div>
+
+<script type = "text/javascript" language="javascript">
+        var linkk = "http://127.0.0.1:5000/api";
+                $.getJSON(linkk, function(emp) {
+                    // $('#display').append(''+emp.total_seconds);
+                    console.log('Longitude :'+ emp.total_seconds );
+
+                    const counter_options = {
+                    suffix: ' minutes',
+                    };
+
+                
+                var counter_func = new CountUp('lol',0,emp.minutes,0,4.5,counter_options);
+                // new CountUp('lol',0,emp.total_seconds,0,9) target,start val, end val, decimal, duration
+                console.log(emp.total_seconds)
+                if (!counter_func.error) {
+                  counter_func.start();
+                } else {
+                  console.error(counter_func.error);
+                }
+
+                var counter_func_1 = new CountUp('display',0,2564,0,3.5);
+                // new CountUp('lol',0,emp.total_seconds,0,9) target,start val, end val, decimal, duration
+                if (!counter_func_1.error) {
+                  counter_func_1.start();
+                } else {
+                  console.error(counter_func_1.error);
+                }
+
+            });
+          // $("#display").counterUp({delay:10,time:1000});
+
+</script>
 
 </div>
-<script type="text/javascript">
-  $(".num").counterUp({delay:10,time:1000});
-</script>
-</div>
+
+<footer id="footer">
+
+<p>@Copyright 2020</p>
+
+</footer>
 </body>
 </html>
