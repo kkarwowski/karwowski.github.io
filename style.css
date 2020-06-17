@@ -7,17 +7,6 @@
     }
 }
 
-
-
-@media (max-width: 800px) {
-  body{
-    background: url(old_bg/bg.jpg) no-repeat center fixed;
-  /* CSS that should be displayed if width is equal to or less than 800px goes here */
-  }
-}
-
-
-
 body{
   margin: 0;
   padding: 0;
@@ -29,11 +18,11 @@ body{
   animation-timing-function: ease-in-out;
   animation-duration: 1.5s;
   animation-fill-mode:forwards;
-
   -webkit-background-size: cover;
   /* -moz-background-size: cover; */
   /* -o-background-size: cover; */
   /* background-size: cover; */
+
 }
 .iconss ul li i{
 font-size: 42px;
@@ -64,6 +53,8 @@ a.button2{
   color:#BBBBBB;
   border-color:#BBBBBB;
   }
+
+
   /* @media all and (max-width:50em){
     a.button2{
     display:block;
@@ -71,20 +62,19 @@ a.button2{
      }
   }  */
 
-
-
 .title_page{
 /* font-family: Copperplate; */
 /* font-family: Consolas; */
 /* font-family: 'Futura',sans-serif; */
 /* font-family: 'Rockwell',sans-serif; */
- word-break:break-all;
+  word-break:break-all;
 /* font: 400 60px/1.2 'Merienda One', Helvetica, sans-serif; */
   color: #e8e8e8;
   /* font-family: 'Bellota Text', cursive; */
   font-family: 'Quantico', sans-serif;
-  font-size: 50px;
+  font-size: 2.6em;
   font-weight: bold;
+  letter-spacing: 0.08em;
 }
 
 /* displays Krzysztof Karwowski in block as they are in span */
@@ -97,10 +87,12 @@ float: right;
 
 } */
 
-.below h5{
+.below h5 {
+  font-family: 'Futura',sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   color: #e8e8e8;
+  font-size: 1px;
 /* display: inline-block; */
 
 }
@@ -116,28 +108,22 @@ float: right;
   color: #e8e8e8;
   /* font-family: 'Century Gothic',sans-serif; */
   font-family: 'Futura',sans-serif;
+  font-size: 12px;
 }
 
 .box{
-  /* width: 480px; */
-  width: 35%;
+  width: 30%;
   /* background: rgba(0, 0, 0, 0.2); */
   /* background: rgba(255, 255, 255, 0.05); */
-  /* padding: 40px; */
-  padding: 6%;
+  padding: 2%;
   text-align: center;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 1%;
   color: #e8e8e8;
   /* font-family: 'Century Gothic',sans-serif; */
   font-family: 'Futura',sans-serif;
 }
 
-.livedata{
-  /* display: table; */
-  /* display: inline-block; */
-  /* float: left; */
-}
 .livedata ul li p{
   padding-top: 0px;
   font-size: 10px;
@@ -151,12 +137,23 @@ float: right;
 
 .livedata_dot_txt {
 padding-left: 10px;
-   float: left;
+   /* float: left; */
    text-align: center;
 }
 .livedata_dot_and_text{
+  padding-top: 20px;
   margin: auto;
-  width: 350px;
+  width: 100%;
+}
+
+table, th {
+  border: 0px;
+  border-collapse: collapse;
+  font-family: 'Quantico', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #e8e8e8;
+  margin: auto;
 }
 
 #lol,#display  {
@@ -164,21 +161,15 @@ padding-left: 10px;
   font-size: 25px;
 }
 .livedata ul li{
-  /* display: table; */
   display: inline-block;
-  padding: 0px
-  margin: auto; /* float: left; */
+  padding: 0px;
+  margin: auto; 
 }
 
 .box_counter{
   height: 50%;
   width: 180px;
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* background: rgba(0, 0, 0, 0.2); */
-  padding: 20px;
-  padding-top: 10px;
-  /* text-align: center; */
-  /* margin: auto; */
+  padding: 15px;
   margin-top: 2%;
   color: #e8e8e8;
   /* font-family: 'Century Gothic',sans-serif; */
@@ -187,14 +178,13 @@ padding-left: 10px;
 }
 .box_counter i{
   font-size: 35px;
+  padding: 0;
 }
 .box_counter h5{
   font-size: 30px;
   padding: 0px;
 }
-/* .box_counter p{
-  font-size: px;
-} */
+
 .box-img{
   border-radius: 50%;
   width: 200px;
