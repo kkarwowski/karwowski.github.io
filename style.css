@@ -67,10 +67,11 @@ a.button2{
 /* font-family: Consolas; */
 /* font-family: 'Futura',sans-serif; */
 /* font-family: 'Rockwell',sans-serif; */
+/* font-family: 'Bellota Text', cursive; */
   word-break:break-all;
 /* font: 400 60px/1.2 'Merienda One', Helvetica, sans-serif; */
   color: #e8e8e8;
-  /* font-family: 'Bellota Text', cursive; */
+
   font-family: 'Quantico', sans-serif;
   font-size: 2.6em;
   font-weight: bold;
@@ -84,17 +85,16 @@ a.button2{
 
 /* .chris{
 float: right;
-
 } */
 
-.below h5 {
+.below p {
   font-family: 'Futura',sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   color: #e8e8e8;
-  font-size: 1px;
-/* display: inline-block; */
-
+  /* font-size: 1.2em; */
+  font-size: 100%;
+  display: inline-block;
 }
 
 #footer{
