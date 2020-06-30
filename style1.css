@@ -528,6 +528,11 @@ display:table-row-group;
 @media only screen and (min-width: 412px) and (-webkit-min-device-pixel-ratio: 2.625){
     body{
       background-size: auto;
+      background: url(bg_large.jpg);
+      background-size: auto;
+      background-color: #161616 ;
+      background-position: left top;
+      background-repeat: no-repeat;
        }
   
     .box{
