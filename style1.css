@@ -415,7 +415,7 @@ font-size: 50%;
 
 .iconss_projects {
 width: 20%;
-height: 10px
+height: 10px;
 font-size: 42px;
 color: #e8e8e8;
 display: inline-block;
@@ -538,6 +538,7 @@ display:table-row-group;
     .box{
       width: 80%;
       font-size: 3vw;
+      height: 1800px;
     }
     .livedata ul li p{
       font-size: 3vw;
