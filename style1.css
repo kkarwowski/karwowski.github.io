@@ -523,7 +523,7 @@ display:table-row-group;
   font-weight: normal;
   font-family: 'Futura',sans-serif;
 }
-@media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 3){
+@media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2){
     .box{
       width: 80%;
     }
