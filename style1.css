@@ -20,7 +20,7 @@ body{
 
   /* background: url(bg_large.jpg) no-repeat center fixed; */
   background: url(bg_large.jpg);
-  background-size: auto auto;
+  background-size: auto;
   background-position: left top;
   background-repeat: no-repeat;
 
@@ -133,7 +133,7 @@ float: right;
   color: #e8e8e8;
   /* font-family: 'Century Gothic',sans-serif; */
   font-family: 'Futura',sans-serif;
-  font-size: 12px;
+  font-size: 0.8vw;
 }
 
 .box{
@@ -523,11 +523,70 @@ display:table-row-group;
   font-weight: normal;
   font-family: 'Futura',sans-serif;
 }
-@media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2){
+
+
+@media only screen and (min-width: 412px) and (-webkit-min-device-pixel-ratio: 2.625){
+    body{
+      background-size: auto;
+       }
+  
     .box{
       width: 80%;
+      font-size: 3vw;
+    }
+    .livedata ul li p{
+      font-size: 3vw;
+    }
+    .box_counter{
+      /* 
+      I saved by using
+      */
+      font-size: 3vw;
+      width: 60%;
+      margin: auto;
+    }
+
+    .box_counter i{
+      /* 
+      Icond with clock */
+      font-size: 5vw;
+      display: inline-block;
+    }
+
+    #lol{
+      font-size: 3vw;
+    }
+
+    .iconss ul li i{
+      font-size: 8vw;
+    }
+    table, th{
+      /* live data with DOT */
+      font-size: 2vw;
+      margin: auto;
+    }
+    #index_gallery{
+      width: 70%;
     }
     .popup{
-      width: 10%;
+      width: 70%;
     }
+    .title_page{
+      font-size: 8vw;
+    }
+    #footer{
+      font-size: 2vw;
+    }
+    #myBtn {
+      
+      position: fixed;
+      bottom: 2vw;
+      right: 6vw;
+      
+      font-size: 3vw;
+      
+    }
+
+
+
   }
