@@ -78,13 +78,6 @@ a.button2{
   }
 
 
-  /* @media all and (max-width:50em){
-    a.button2{
-    display:block;
-    margin:0.4em auto;
-     }
-  }  */
-
 .title_page{
 /* font-family: Copperplate; */
 /* font-family: Consolas; */
@@ -121,7 +114,6 @@ float: right;
 }
 
 
-
 #footer{
   position: fixed;
   left: 0;
@@ -149,8 +141,6 @@ float: right;
   /* font-family: 'Century Gothic',sans-serif; */
   font-family: 'Futura',sans-serif;
 }
-
-
 
 
 .livedata ul li p{
@@ -357,6 +347,7 @@ PROJECTS.html
    text-align: center;
  }
  .text_small {
+   padding-top: 2em;
    color: white;
    font-family: 'Futura',sans-serif;
    font-size: 1em;
@@ -395,12 +386,6 @@ PROJECTS.html
    font-size: 1em;
  }
 
-/* .table_div{
-font-size: 50%;
- display: inline-table;
-
-} */
-
 
 .below_projects {
   font-family: 'Futura',sans-serif;
@@ -414,11 +399,11 @@ font-size: 50%;
 
 
 .iconss_projects {
-width: 20%;
-height: 10px;
-font-size: 42px;
-color: #e8e8e8;
-display: inline-block;
+  width: 20%;
+  height: 10px;
+  font-size: 42px;
+  color: #e8e8e8;
+  display: inline-block;
 }
 
 
@@ -426,13 +411,12 @@ display: inline-block;
 .iconss_projects ul li i{
   padding: 20px;
   /* float: center; */
-font-size: 42px;
-color: #e8e8e8;
-display:table-row-group;
+  font-size: 42px;
+  color: #e8e8e8;
+  display:table-row-group;
 }
 
 #index_gallery {
-
   width: 45%;
   padding: 2%;
   text-align: center;
@@ -444,15 +428,14 @@ display:table-row-group;
 }
 
 
-
 /* top button */
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 120px;
+  right: 50px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 1.3em;
   border: none;
   outline: none;
   background-color: #3498db;
@@ -467,65 +450,96 @@ display:table-row-group;
 }
 
 
-
-/* popup class */
-
-
-
-.overlay_popup {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay_popup:target {
-  visibility: visible;
-  opacity: 1;
-}
+/* popup  */
 
 .popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
+  position: fixed;
+  padding: 10px;
+  width: 38%;
+  /* max-width: 500px; */
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,.9);
+  visibility: hidden;
+  opacity: 0;
+  /* "delay" the visibility transition */
+  -webkit-transition: opacity .5s, visibility 0s linear .5s;
+  transition: opacity .5s, visibility 0s linear .5s;
+  z-index: 1;
 }
 
+/* title of popup */
 .popup h2 {
-  margin-top: 0;
-  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  color: #000000;
   font-family: 'Futura',sans-serif;
 }
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
+/* text in popup */
+.popup p {
   color: #333;
   font-weight: normal;
   font-family: 'Futura',sans-serif;
 }
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+  /* cancel visibility transition delay */
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.popup-close {
+  position: absolute;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,.9);
+}
+.popup .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: #000;
+  transition: color .3s;
+  font-size: 2em;
+  line-height: .6em;
+  font-weight: bold;
+}
+.popup .close:hover {
+  color: #00E5EE;
+}
+
+.close-popup {
+  background: rgba(0,0,0,.7);
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* "delay" the visibility transition */
+  -webkit-transition: opacity .5s, visibility 0s linear .5s;
+  transition: opacity .5s, visibility 0s linear .5s;
+}
+.popup:target + .close-popup{  
+  opacity: 1;
+  visibility: visible;
+  /* cancel visibility transition delay */
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
 
 
-@media only screen and (min-width: 412px) and (-webkit-min-device-pixel-ratio: 2.625){
+
+@media only screen and (max-device-width: 500px) and (-webkit-min-device-pixel-ratio: 2){
     body{
       background-size: auto;
       background: url(bg_large.jpg);
@@ -584,15 +598,14 @@ display:table-row-group;
       font-size: 2vw;
     }
     #myBtn {
-      
       position: fixed;
-      bottom: 2vw;
+      bottom: 12vw;
       right: 6vw;
-      
-      font-size: 3vw;
-      
+      font-size: 4.5vw;
     }
-
+    .container:hover .overlay {
+      opacity: 0;
+    }
 
 
   }
