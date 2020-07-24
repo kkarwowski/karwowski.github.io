@@ -43,8 +43,16 @@ IT Professional - Technology Enthusiast
 <br>
 <div class="livedata">
 <ul>
-        <li><div class="box_counter"><i class="fa fa-clock-o" aria-hidden="true"></i><p><div id = "lol">292</div></p>I saved by using my automation scirips at work</div></li>
+        <li><div class="box_counter">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </li>
+        <div id = "lol1">4</div>
+        <div id = "lol">292</div>
+        <li></p>I saved by using my automation scirips at work</li>
 <!-- <li><div class="box_counter"><i class="fa fa-code" aria-hidden="true"></i><p><div class="num" id="display">2564</div></p>lines of code published to Github</div></li> -->
+      
+      <br>
+      <br>
       </ul>
 </div>
 
@@ -69,41 +77,67 @@ IT Professional - Technology Enthusiast
 <br>
 <br>
 <br>
-<div class="iconss">
-<ul>
-<li><a href="https://github.com/kkarwowski" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-<li><a href="https://uk.linkedin.com/in/kkarwowski"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-<!--  <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> -->
-</ul>
-</div>
+
+    <div class="iconss">
+        <ul>
+        <li><a href="https://github.com/kkarwowski" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://uk.linkedin.com/in/kkarwowski"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        <!--  <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> -->
+        </ul>
+
+    </div>
+
+  <div class="codewars">
+  <ul>
+    <!-- <li> Codewars profile</li> -->
+    <li><a href="https://www.codewars.com/users/kkarwowski/" target="_blank"><img src="https://www.codewars.com/users/kkarwowski/badges/micro"></a></li>
+  </ul>
+    
+  </div>
 
 <script type = "text/javascript" language="javascript">
         var linkk = "https://kk.api.supermarketpricebot.fun";
                 $.getJSON(linkk, function(emp) {
                     // $('#display').append(''+emp.total_seconds);
                     console.log('Longitude :'+ emp.total_seconds );
-
+                    var minutes_and_hours = emp.hours_minutes.split(':');
+                    console.log('Minutes:'+ minutes_and_hours[1] );
+                    
                     const counter_options = {
                     suffix: ' minutes',
                     };
+                    const counter_options1 = {
+                    suffix: ' hours',
+                    };
 
 
-                var counter_func = new CountUp('lol',0,emp.minutes,0,4.5,counter_options);
+                var counter_func_minutes = new CountUp('lol',0,minutes_and_hours[1],0,5.5,counter_options);
                 // new CountUp('lol',0,emp.total_seconds,0,9) target,start val, end val, decimal, duration
-                console.log(emp.total_seconds)
-                if (!counter_func.error) {
-                  counter_func.start();
+                
+                if (!counter_func_minutes.error) {
+                  counter_func_minutes.start();
                 } else {
-                  console.error(counter_func.error);
+                  console.error(counter_func_minutes.error);
+                }
+                //  for hours, takes first [0] element from minutes function 
+                var counter_func_hours = new CountUp('lol1',0,minutes_and_hours[0],0,5.5,counter_options1);
+                
+                if (!counter_func_hours.error) {
+                  counter_func_hours.start();
+                } else {
+                  console.error(counter_func_hours.error);
                 }
 
-                var counter_func_1 = new CountUp('display',0,2564,0,3.5);
-                // new CountUp('lol',0,emp.total_seconds,0,9) target,start val, end val, decimal, duration
-                if (!counter_func_1.error) {
-                  counter_func_1.start();
-                } else {
-                  console.error(counter_func_1.error);
-                }
+
+
+                //  for lines of code display which is disabled now
+                // var counter_func_1 = new CountUp('display',0,2564,0,3.5);
+                
+                // if (!counter_func_1.error) {
+                  // counter_func_1.start();
+                // } else {
+                  // console.error(counter_func_1.error);
+                // }
 
             });
           // $("#display").counterUp({delay:10,time:1000});
@@ -131,7 +165,14 @@ IT Professional - Technology Enthusiast
 
 </script>
 </div>
+
+  
+
 </div>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
